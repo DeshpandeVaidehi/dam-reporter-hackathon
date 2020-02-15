@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Dam reporter</string>
+    <string name="app_description">We collect data of dams in distress conditions to help government identify Dams needing immediate help.</string>
+    <string name="learn_more">learn more</string>
+    <string name="join_us">Join Us</string>
+    <string name="username">Mobile Number</string>
+    <string name="pwd">PASSWORD</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="report_dam">Table showing dams report</string>
+    <string name="submit">Submit</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="representation">Representation</string>
+    <string name="signout">Sign Out</string>
+    <string name="addNewData">Add New Data</string>
+    <string name="seepage">Is there any seepage?  </string>
+    <string name="cracks">Are there Cracks?  </string>
+    <string name="erosion">Do you see erosion?  </string>
+    <string name="gates_condition">Rate Gates Condition: </string>
+    <string name="sluice_gates_condition">Sluice Gates Condition: </string>
+    <string name="max_flood_handled">Maximum Flood Handled in cubic meter: </string>
+    <string name="energy_dissipator_condition">Energy Dissipator Condition: </string>
+    <string name="instrument_condition">Instrument Condition: </string>
+    <string name="desc">Enter additional comments: </string>
+    <string name="choose">Choose</string>
+    <string name="dam_name">Select Dam</string>
+    <string-array name="dam_names">
+        <item>Srisailam H.E.Project</item>
+        <item>Somasila</item>
+        <item>Nagarjunasagar Dam</item>
+        <item>Sriamasagar</item>
+        <item>Manimata  (Hasdeo) Bango</item>
+        <item>Ukai</item>
+        <item>Kadana</item>
+        <item>Karjan</item>
+        <item>Bhakra Dam</item>
+        <item>Pong Dam</item>
+        <item>Chamera I (NHPC)</item>
+        <item>SALAL (Rockfill Dam) NHPC</item>
+        <item>SALAL (Concrete Dam) NHPC</item>
+        <item>Baglihar</item>
+        <item>Maithon Dam</item>
+        <item>Panchet Hill</item>
+        <item>Tenughat</item>
+        <item>Krishnarajasagar</item>
+        <item>Tungabhadra</item>
+        <item>Bhadra Dam</item>
+        <item>Linganamakki Dam</item>
+        <item>Malaprabha</item>
+        <item>Hidkal</item>
+        <item>Hemavathy Project</item>
+        <item>Supa</item>
+        <item>Lakhya</item>
+        <item>Almatti</item>
+        <item>KAKKI (EB)</item>
+        <item>IDUKKI (EB)</item>
+        <item>CHERUTHONI  (EB)</item>
+        <item>KULAMAVU  (EB)</item>
+        <item>IDAMALAYAR  (EB)</item>
+        <item>Gandhisagar</item>
+        <item>Tawa</item>
+        <item>Indira Sagar</item>
+        <item>Koyna</item>
+        <item>Paithan (Jayakwadi)</item>
+        <item>Isapur</item>
+        <item>Totladoh (Pench Hydel)</item>
+        <item>Hirakud</item>
+        <item>Rengali</item>
+        <item>Upper Kolab</item>
+        <item>Indravati (Upper Indavati project)</item>
+        <item>Kapur (Upper Indavati project)</item>
+        <item>Muran (Upper Indavati project)</item>
+        <item>Podagada  (Upper Indavati project)</item>
+        <item>Thein (Ranjit Sagar)</item>
+        <item>RANAPRATAP SAGE</item>
+        <item>MAHI BAJAJ SAGAR</item>
+        <item>BISALPUR</item>
+        <item>Mettur</item>
+        <item>Sholayar</item>
+        <item>Ramganga</item>
+        <item>Jamrani</item>
+        <item>Tehri (THDC)</item>
+        <item>Rihand</item>
+        <item>Matatila</item>
+        <item>Rajghat</item>
+        <item>Kangsabati</item>
+    </string-array>
+
+    <string-array name="two_choices">
+        <item>NO</item>
+        <item>YES</item>
+    </string-array>
+
+    <string-array name="three_choices">
+        <item>Best</item>
+        <item>Average</item>
+        <item>Worst</item>
+    </string-array>
+</resources>
+

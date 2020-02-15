@@ -1,0 +1,1 @@
+insert into dam(dam_name, nearest_city, state, year_of_completion, river, height, length, volume_content, gross_storage_capacity, reservoir_area, effective_storage_capacity, designed_spillway) values('Paithan (Jayakwadi)', 'Paithan', 'Maharashtra', 1976, 'Godavari', 41.30, 10415.00, 13410.00, 2.91, 398.00, 2.17, 18153.00);

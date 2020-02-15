@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_shadow_start_color">
+
+    <LinearLayout
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginVertical="15dp"
+        android:layout_marginHorizontal="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/startblue"
+            android:text="@string/sign_up"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+        <EditText
+            android:background="@drawable/edittextstyle"
+            android:id="@+id/user_name"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/startblue"
+            android:hint="Name"
+            android:inputType="text"
+            android:layout_gravity="center_horizontal"
+            />
+        <EditText
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="10dp"
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/aadhaar_no"
+            android:hint="Aadhaar No"
+            android:inputType="number"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mobile_no"
+            android:hint="Mobile No"
+            android:inputType="number"
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:background="@drawable/edittextstyle"
+            android:layout_marginTop="10dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/email_id"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_gravity="center_horizontal"/>
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_width="25pt"
+            android:id="@+id/userImage"
+            android:layout_height="25pt"
+            android:src="@drawable/ic_person_black_24dp"
+            android:background="@color/lightblue"
+            />
+        <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="140dp"
+            android:id="@+id/signup"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonstyle2"
+            android:drawableEnd="@drawable/ic_send_black_24dp"
+            android:text="Sign Up"
+            android:shadowColor="#fff"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/back_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Back to Login"
+            android:layout_marginTop="5dp"
+            android:background="@color/startblue"
+            android:textColor="#FFFF"
+            android:padding="5dp"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,1121 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="{{url_for('static', filename='style_rating.css') }}" rel="stylesheet" />
+<style>
+
+body, html {
+	margin:0
+}
+
+.top1 {
+   	height: 100%;
+    	background-image: url({{url_for('static', filename = 'img/bakrana-ngal-dam.jpg')}});
+	background-repeat:no-repeat;
+    	background-size:cover;
+    	background-attachment: fixed;
+    	position: relative;
+	width:100%;
+
+}
+
+
+.nav {
+
+
+	position: relative;
+	padding:30px;
+
+	
+
+
+
+}
+
+.username {
+	padding-left:20px;
+	float:left;
+
+}
+
+.avatar {
+	border-radius:50%;
+	float:left;
+}
+
+.nav li {
+	display:inline;
+	font-size:25px;
+	padding-right:40px;
+	color:white;
+	font-family: "Open Sans", sans-serif;
+	position:relative;
+	cursor:pointer;
+}
+
+.nav li:hover {
+	color:black;
+}
+
+.menu {
+	position:relative;
+	float:right;
+	display:inline;
+} 
+
+.heading {
+
+	font-size:45px;
+	text-align:center;
+	color:white;
+	font-family: "Open Sans", sans-serif;
+	position:relative;
+	padding-top:250px;
+	width:100%;
+	display:block;
+}
+
+.entry {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    	transition: 0.3s;
+    	
+	/*padding:20px;*/
+	margin-top:40px;
+	/*border-style:solid;
+	border-color:#2f2f2f;
+	border-width:0 0 0 20px;*/
+	overflow:auto;
+	
+	
+}
+
+.entry:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+	/*padding:30px;*/
+
+}
+
+.entries {
+	padding: 60px;
+	
+	position:relative;
+	
+
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto auto 250px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /*overflow:auto;*/
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.close_profile {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_profile:hover,
+.close_profile:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close_dataentry {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close_dataentry:hover,
+.close_dataentry:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@-webkit-keyframes animatetop {
+    from {width:0%;opacity:0} 
+    to {width:80%;opacity:1}
+}
+
+@keyframes animatetop {
+    from {width:0%;opacity:0}
+    to {width:80%;opacity:1}
+}
+
+@-webkit-keyframes animateprofile {
+    from {opacity:0} 
+    to {opacity:1}
+}
+
+@keyframes animateprofile {
+    from {opacity:0}
+    to {opacity:1}
+}
+
+th {
+	font-size:25px;
+	padding:20px;
+	text-align:center;
+	
+	
+}
+
+ /*tr:hover {background-color: #f5f5f5;} */
+
+
+
+td {
+	text-align:center;
+	font-size:20px;
+	width:70%;
+}
+
+table {
+	width:100%;
+	margin-bottom:50px;
+}
+
+.blue {
+  background-color: #fffff2;
+}
+
+.damimage {
+	height:170px;
+	width:170px;
+	float:left;
+}
+
+
+.entry_short_details {
+	padding: 10px 10px 10px 10px;
+	float:left;
+
+}
+
+.next_prev_buttons {
+	margin-top:30px;
+	padding-left:47%;
+
+}
+
+.next_prev {
+	border-radius:50%;
+	height:40px;
+	width:40px;
+	color:#efefef;
+	background-color:#111111;
+	font-size:20px;
+
+}
+
+
+.from_to_dates {
+	padding-left:25%;
+	padding-top:20px;
+	padding-bottom:20px;
+
+	overflow:auto;
+}
+
+.from {
+	height:40px;
+	width:200px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	margin-left:15px;
+	background-color:#ffffff;
+	border-style:solid;	
+	border-color:#e3e3e3;
+	border-radius:5px;
+	
+
+	
+
+}
+
+.to {
+
+	height:40px;
+	width:200px;
+	font-size:15px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left:15px;
+	background-color:#ffffff;
+	border-style:solid;	
+	border-color:#e3e3e3;
+	border-radius:5px;
+
+	
+
+}
+
+.profile {
+	padding-top:30px;
+	height:50%;
+	padding-left:60px;
+	padding-bottom:50px;
+	-webkit-animation-name: animateprofile;
+    	-webkit-animation-duration: 0.4s;
+    	animation-name: animateprofile;
+    	animation-duration: 0.8s;
+
+
+
+
+}
+
+.profile input {
+	height:40px;
+	width:300px;
+
+	margin-left:10px;
+	background-color:#ffffff;
+	border-style:solid;	
+	border-color:#e3e3e3;
+	border-radius:5px;
+
+}
+
+.to_div {
+	white-space:nowrap;
+	float:left;
+	margin-left:50px;
+	width:40%;
+}
+
+.profile_left {
+	white-space:nowrap;
+	padding-left:20px;
+	padding-top:30px;
+
+}
+
+.profile_right {
+	white-space:nowrap;
+	float:left;
+	margin-left:300px;
+
+}
+
+.button {
+	background: rgba(4, 40, 68, 0.85);
+	border: none;
+	color: white;
+	padding: 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	display: inline;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 3px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	float:left;
+
+}
+
+
+.show_menu_button {
+	position: fixed;
+	background: rgba(4, 40, 68, 0.85);
+	border: none;
+	color: white;
+	z-index:1;
+	padding: 20px 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	bottom:5%;
+	right:5%;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+
+}
+
+.resize {
+	height:200px;
+	width:200px;
+	padding-right:30px;
+
+}
+
+
+.no_notif {
+	text-align:center;
+	font-weight:bold;
+	color:lightblue;
+	font-size:200%;"
+
+}
+
+@media only screen and (max-width: 1000px) {
+	.nav li {
+		display:block;
+		text-align:center;
+	}
+
+	
+	.menu {
+		padding-top:120px;
+		display:block;
+		float:none;
+	}
+	
+	.heading {
+		padding-top:100px;
+	}
+
+	.top1 {
+
+		height:600px;
+	}
+	.entry {
+		
+		
+		padding:20px 10px 20px 10px;
+	}
+	.entries {
+		padding:10px;
+		height:none;
+	}
+	.to {
+		margin-top:5px;
+		margin-left:28px;
+		
+	}
+	.from_to_dates {
+		padding:10%;
+	}
+	.to_div {
+		display:block;
+		margin-left:5px;
+		width:100%;
+	}
+	
+	.profile input {
+		width:70%;
+	}
+	.profile_left {
+		float:none;
+
+	}
+	.profile_right {
+		float:none;
+		margin-left:0px;
+		padding-left:22px;
+		margin-top:20px;
+	}
+	.profile {
+		height:none;
+
+	}
+	.button {
+		float:left;
+		margin-left:45%;
+		margin-top:20px;
+
+	}
+	
+
+}
+
+
+</style>
+
+</head>
+
+<body onload = "notifications()">
+
+<div id="google_translate_element" style = "width:100%"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+<div class = "top1">
+
+<button class = "show_menu_button" onclick="go_to_home()">Home</button>
+<div class = "nav">
+
+<img class = "avatar" src = "{{url_for('static', filename = 'img/new_logo.png')}}">
+<h2 class = "username">Welcome {{user}}</h2>
+<h1 style = "display:none" id = "aadhaar">{{aadhaar}}</h1>
+
+
+<ul class="menu">
+<li onclick = "window.scrollBy(0, 690);">Entries</li>
+<li onclick = "window.scrollBy(0, 690);">Notifications</li>
+<li>Logout</li>
+</ul>
+
+
+
+</div> 		<!--nav-->
+
+
+<div>
+<h1 class = "heading">Dam Reporter</h1>
+</div>
+
+</div>		<!--top1-->
+
+<!-- second div "records" starts -->
+<div class = "entries">
+<div class = "from_to_dates">
+<div style="white-space:nowrap;float:left;"><label style = "font-family: Arial, Helvetica, sans-serif;">From:</label><input type = "date" class = "from" placeholder = "From" id = "from_date_notif"/></div>
+<div class="to_div"><label style = "font-family: Arial, Helvetica, sans-serif;">To:</label><input type = "date" class = "to" placeholder = "To" id = "to_date_notif"/></div>
+<div><button class = "button" onclick = "data_display_notif()">Submit</button></div>
+</div>
+
+
+
+<div id = "entry_starts_notif">
+<p style="text-align:center;font-weight:bold;color:lightblue;font-size:200%;">Nothing to show. Choose dates</p>
+
+
+
+
+</div>
+
+</div>
+
+
+
+<!-- modal box for records-->
+
+<div id="notif" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<div>
+	<p><b>Report:</b></p>
+
+	<table cellspacing=0 bgcolor="white" id = "notif_table">
+	<colgroup>
+   
+    		<col class="blue" />
+ 	</colgroup>
+	<thead style="background-color:#efefef;">
+    	<tr>
+      
+      		<th>Parameter</th>
+      		<th>Value</th>
+    	</tr>
+ 	</thead>
+	
+
+
+	</table>
+
+
+	<div style="margin-top:20px;margin-bottom:30px;">
+	<img src = "{{url_for ('static', filename = 'img/Tehri-Dam.jpg')}}" class="resize">
+	<img src = "{{url_for ('static', filename = 'img/Hirakud-Dam.jpg')}}" class="resize">
+	<img src = "{{url_for ('static', filename = 'img/bakrana-ngal-dam.jpg')}}" class="resize">
+	
+	</div>
+
+   
+
+<form>
+  <fieldset>
+    <span class="star-cc-group">
+      
+      <input type="radio" id="rating-3" name="rating" value="2" onchange = "send_severity(this.value)"/><label for="rating-3">3</label>
+      <input type="radio" id="rating-2" name="rating" value="1" onchange = "send_severity(this.value)"/><label for="rating-2">2</label>
+      <input type="radio" id="rating-1" name="rating" value="0" onchange = "send_severity(this.value)"/><label for="rating-1">1</label>
+      <input type="radio" id="rating-0" name="rating" value="0" class="star-cc-clear" /><label for="rating-0">0</label>
+    </span>
+  </fieldset>
+</form>
+
+	</div>
+  </div>
+
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+
+
+<!-- modal box ends -->
+<!-- second div "notificatons" over" -->
+
+<!-- second div "notifications" starts -->
+
+
+<div class = "entries">
+
+
+<div id = "entry_starts">
+<p style="text-align:center;font-weight:bold;color:lightblue;font-size:200%;">No Notifications to show right now</p>
+
+</div>
+
+
+
+
+
+
+</div> 
+
+
+
+</div>
+
+
+
+<!-- modal box for entry display-->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+	<div>
+	<p><b>Report:</b></p>
+
+	<table cellspacing=0 bgcolor="white">
+	<colgroup>
+   
+    		<col class="blue" />
+ 	</colgroup>
+	<thead style="background-color:#efefef;">
+    	<tr>
+      
+      		<th>Parameter</th>
+      		<th>Value</th>
+    	</tr>
+ 	</thead>
+	<tr>
+      		<th>Parameter1</th>
+      		<td>Value1</td>
+      	</tr>
+	<tr>
+      		<th>Parameter2</th>
+      		<td>Value2</td>
+      	</tr>
+
+
+	</table>
+
+
+	<div style="margin-top:20px;margin-bottom:30px;">
+	<img src = "{{url_for ('static', filename = 'img/Tehri-Dam.jpg')}}" class="resize">
+	<img src = "{{url_for ('static', filename = 'img/Hirakud-Dam.jpg')}}" class="resize">
+	<img src = "{{url_for ('static', filename = 'img/bakrana-ngal-dam.jpg')}}" class="resize">
+	
+	
+	</div>
+
+
+<form>
+  <fieldset>
+    <span class="star-cc-group">
+      
+      <input type="radio" id="rating-3" name="rating" value="2" onchange = "send_severity(this.value)"/><label for="rating-3">3</label>
+      <input type="radio" id="rating-2" name="rating" value="1" onchange = "send_severity(this.value)"/><label for="rating-2">2</label>
+      <input type="radio" id="rating-1" name="rating" value="0" onchange = "send_severity(this.value)"/><label for="rating-1">1</label>
+      <input type="radio" id="rating-0" name="rating" value="0" class="star-cc-clear" /><label for="rating-0">0</label>
+    </span>
+  </fieldset>
+</form>
+	</div>    
+
+
+
+  </div>
+
+</div>
+
+
+<!-- modal box ends -->
+<!-- second div "data display" over" -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var opened_entry = "";
+function open_details(id) {
+
+	var modal = document.getElementById('notif');
+
+	opened_entry = id;
+	var options = opened_entry.split('/');
+
+
+	var datajson = {};
+
+
+	datajson['dam_name'] = options[0];
+	datajson['time_stamp'] = options[1];
+	datajson['aadhaar_no'] = options[2];
+
+	data_json = JSON.stringify(datajson);
+
+	var table = document.getElementById("notif_table");
+
+	while (table.firstChild) {
+    			table.removeChild(table.firstChild);
+	}
+
+
+	var colg = document.createElement("colgroup");
+	colg.classList.add("blue");
+	table.appendChild(colg);
+
+	var thead = document.createElement("thead");
+	thead.style.backgroundColor = "grey";
+
+	var headrow = document.createElement("tr");
+	var head1 = document.createElement("th");
+	var head2 = document.createElement("th");
+	head1.innerHTML = "Parameter";
+	head2.innerHTML = "Value";
+	headrow.appendChild(head1);
+	headrow.appendChild(head2);
+	thead.appendChild(headrow);
+	table.appendChild(thead);
+
+
+	var xhttp1 = new XMLHttpRequest();
+  	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+		var myObj = JSON.parse(this.responseText);
+		for(param in Object.keys(myObj.report[0])) {
+
+
+   
+
+			//var row = table.insertRow(0);
+			var row = document.createElement("tr");
+			var cell1 = document.createElement("th");
+			if(Object.keys(myObj.report[0])[param] == "dam_name") 
+				cell1.innerHTML = "Dam name";
+			else if(Object.keys(myObj.report[0])[param] == "authority_level") 
+				cell1.innerHTML = "Authority Level";
+			else if(Object.keys(myObj.report[0])[param] == "aadhaar_no") 
+				cell1.innerHTML = "Aadhaar Number";
+			else if(Object.keys(myObj.report[0])[param] == "descrip") 
+				cell1.innerHTML = "description";
+			else if(Object.keys(myObj.report[0])[param] == "energy_dissipator_condition") 
+				cell1.innerHTML = "Energy dissipator condition";
+			else if(Object.keys(myObj.report[0])[param] == "gates_condition") 
+				cell1.innerHTML = "Gates Condition";
+			else if(Object.keys(myObj.report[0])[param] == "instrument_condition") 
+				cell1.innerHTML = "Instrument Condition";
+			else if(Object.keys(myObj.report[0])[param] == "max_flood_handled") 
+				cell1.innerHTML = "Maximum flood handled";
+			else if(Object.keys(myObj.report[0])[param] == "sluice_gates_condition") 
+				cell1.innerHTML = "Sluice gates condition";
+			else if(Object.keys(myObj.report[0])[param] == "TIME_STAMP") 
+				cell1.innerHTML = "Time of submission";
+			else 
+				cell1.innerHTML = Object.keys(myObj.report[0])[param];
+
+			row.appendChild(cell1);
+			var cell2 = document.createElement("td");
+			cell2.innerHTML = myObj.report[0][Object.keys(myObj.report[0])[param]]; 
+			row.appendChild(cell2);
+
+			table.appendChild(row);
+		}
+
+	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/get_entry_details", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8");
+  	xhttp1.send(data_json);
+
+
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal 
+	
+	modal.style.display = "block";
+	
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	    modal.style.display = "none";
+	    opened_entry = "";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+		modal.style.display = "none";
+		opened_entry = "";
+	    }
+	}
+	opened_entry = id;
+
+}
+
+
+
+
+
+
+
+/*function data_display() {
+ 	window.scrollBy(0, 690);
+
+
+	
+	var from = document.getElementById("from_date").value;
+	var to = document.getElementById("to_date").value;
+
+	if(from == "" || to == "" || (new Date(from) > new Date(to) == 1))
+		return false;
+	
+
+	var datedata = {};
+
+
+	datedata['start_date'] = from;
+	datedata['end_date'] = to;
+	datedata['criteria'] = '1';
+	date_json = JSON.stringify(datedata);
+	var xhttp1 = new XMLHttpRequest();
+  	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+				
+		var myObj = JSON.parse(this.responseText);
+		
+				
+		var div = document.getElementById("entry_starts");
+		while (div.firstChild) {
+    			div.removeChild(div.firstChild);
+		}
+		
+		for (report in myObj.report) {
+			var div1 = document.createElement("div");
+			div1.setAttribute("class", "entry");
+			alert(myObj.report[report].dam_name +  '-' + myObj.report[report].time_stamp + '-' + myObj.report[report].aadhaar_no);
+			div1.setAttribute("id", myObj.report[report].dam_name +  '/' + myObj.report[report].time_stamp + '/' + myObj.report[report].aadhaar_no);
+			div1.setAttribute("onclick", "open_details(this.id)");
+
+			div.appendChild(div1);
+
+
+			
+			var img = document.createElement("img");
+			img.setAttribute("class", "damimage");
+			img.setAttribute("src", "img/Tehri-Dam.jpg");
+
+			div1.appendChild(img);
+		
+			var div2 = document.createElement("div");
+			div2.setAttribute("class", "entry_short_details");
+			div1.appendChild(div2);
+			
+
+			var p1 = document.createElement("p");
+			var b1 = document.createElement("b");
+		 	var textnode = document.createTextNode(myObj.report[report].dam_name); 
+			b1.appendChild(textnode);
+			p1.appendChild(b1);
+			div2.appendChild(p1);
+
+			var p2 = document.createElement("p");
+			var b2 = document.createElement("b");
+		 	var textnode2 = document.createTextNode(myObj.report[report].time_stamp); 
+			b2.appendChild(textnode2);
+			p2.appendChild(b2);
+			div2.appendChild(p2);
+
+			var p3 = document.createElement("p");
+		 	var textnode3 = document.createTextNode(myObj.report[report].descrip); 
+			p3.appendChild(textnode3);
+			div2.appendChild(p3);
+			
+			alert(myObj.report[0].dam_name);
+			alert(myObj.report[0].time_stamp);
+		}
+	
+				
+    	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/get_report", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8");
+  	xhttp1.send(date_json);
+
+}
+*/
+
+function data_display_notif() {
+ 	window.scrollBy(0, 690);
+
+
+	
+	var from = document.getElementById("from_date_notif").value;
+	var to = document.getElementById("to_date_notif").value;
+
+	if(from == "" || to == "" || (new Date(from) > new Date(to) == 1))
+		return false;
+	
+
+	var datedata = {};
+
+
+	datedata['start_date'] = from;
+	datedata['end_date'] = to;
+	datedata['criteria'] = '1';
+	date_json = JSON.stringify(datedata);
+
+	var xhttp1 = new XMLHttpRequest();
+  	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+				
+		var myObj = JSON.parse(this.responseText);
+		 	
+		var div = document.getElementById("entry_starts_notif");
+		while (div.firstChild) {
+    			div.removeChild(div.firstChild);
+		}
+		
+		for (report in myObj.report) {
+			var div1 = document.createElement("div");
+			div1.setAttribute("class", "entry");
+			div1.setAttribute("id", myObj.report[report].dam_name +  '/' + myObj.report[report].time_stamp + '/' + myObj.report[report].aadhaar_no);
+			div1.setAttribute("onclick", "open_details(this.id)");
+
+			div.appendChild(div1);
+
+
+			
+			var img = document.createElement("img");
+			img.setAttribute("class", "damimage");
+			img.setAttribute("src", "{{url_for ('static', filename = 'img/Tehri-Dam.jpg')}}");
+
+			div1.appendChild(img);
+		
+			var div2 = document.createElement("div");
+			div2.setAttribute("class", "entry_short_details");
+			div1.appendChild(div2);
+			
+
+			var p1 = document.createElement("p");
+			var b1 = document.createElement("b");
+		 	var textnode = document.createTextNode(myObj.report[report].dam_name); 
+			b1.appendChild(textnode);
+			p1.appendChild(b1);
+			div2.appendChild(p1);
+
+			var p2 = document.createElement("p");
+			var b2 = document.createElement("b");
+		 	var textnode2 = document.createTextNode(myObj.report[report].time_stamp); 
+			b2.appendChild(textnode2);
+			p2.appendChild(b2);
+			div2.appendChild(p2);
+
+			var p3 = document.createElement("p");
+		 	var textnode3 = document.createTextNode(myObj.report[report].descrip); 
+			p3.appendChild(textnode3);
+			div2.appendChild(p3);
+			
+			
+		}
+	
+				
+    	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/get_report", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8");
+  	xhttp1.send(date_json);
+
+}
+
+function send_severity(severity) {
+	var options = opened_entry.split('/');
+
+
+	var datajson = {};
+
+
+	datajson['dam_name'] = options[0];
+	datajson['time_stamp'] = options[1];
+	datajson['aadhaar_no'] = options[2];
+	datajson['severity'] = severity;
+	data_json = JSON.stringify(datajson);
+	var xhttp1 = new XMLHttpRequest();
+  	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+		var myObj = JSON.parse(this.responseText);
+
+
+	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/save_entry_severity", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8");
+  	xhttp1.send(data_json);
+}
+
+
+function go_to_home() {
+	window.scrollTo(0, 0);
+
+}
+
+
+
+function notifications() {
+	var data = {};
+	var aadhaar = document.getElementById("aadhaar").innerHTML;
+
+	data["aadhaar_no"] = aadhaar;
+		
+	data_json = JSON.stringify(data);
+	var xhttp1 = new XMLHttpRequest();
+	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+		var myObj = JSON.parse(this.responseText);
+
+	var div = document.getElementById("entry_starts");
+		while (div.firstChild) {
+    			div.removeChild(div.firstChild);
+		}
+		count = 0;
+		for (report in myObj.report) {
+			count = 1;
+			var div1 = document.createElement("div");
+			div1.setAttribute("class", "entry");
+			
+			div1.setAttribute("id", myObj.report[report].dam_name +  '/' + myObj.report[report].time_stamp + '/' + myObj.report[report].aadhaar_no);
+			div1.setAttribute("onclick", "open_details(this.id)");
+
+			div.appendChild(div1);
+
+
+			
+			var img = document.createElement("img");
+			img.setAttribute("class", "damimage");
+			img.setAttribute("src", "{{url_for('static', filename = 'img/Tehri-Dam.jpg')}}");
+
+			div1.appendChild(img);
+		
+			var div2 = document.createElement("div");
+			div2.setAttribute("class", "entry_short_details");
+			div1.appendChild(div2);
+			
+
+			var p1 = document.createElement("p");
+			var b1 = document.createElement("b");
+		 	var textnode = document.createTextNode(myObj.report[report].dam_name); 
+			b1.appendChild(textnode);
+			p1.appendChild(b1);
+			div2.appendChild(p1);
+
+			var p2 = document.createElement("p");
+			var b2 = document.createElement("b");
+		 	var textnode2 = document.createTextNode(myObj.report[report].time_stamp); 
+			b2.appendChild(textnode2);
+			p2.appendChild(b2);
+			div2.appendChild(p2);
+
+			var p3 = document.createElement("p");
+		 	var textnode3 = document.createTextNode(myObj.report[report].descrip); 
+			p3.appendChild(textnode3);
+			div2.appendChild(p3);
+			
+			
+		}
+		if(count == 0) {
+			var p = document.createElement('p')
+			p.innerHTML = "No Notifications to show right now";
+			p.classList.add("no_notif");
+			div.appendChild(p);
+
+		}
+		count = 0;
+	
+				
+    	
+
+
+
+
+	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/get_notifications", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8");
+  	xhttp1.send(data_json);
+
+
+}
+</script>
+
+</body>
+</html>

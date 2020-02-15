@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.star-cc-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cc-group * {
+  font-size: 2rem;
+}
+.star-cc-group > input {
+  display: none;
+}
+.star-cc-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cc-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "◉";
+  color: #888;
+}
+.star-cc-group > input:checked ~ label:before, .star-cc-group > input + label:hover ~ label:before, .star-cc-group > input + label:hover:before {
+  content: "◉";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cc-group > .star-cc-clear + label {
+  text-indent: -9999px;
+  width: .5em;
+  margin-left: -.5em;
+}
+.star-cc-group > .star-cc-clear + label:before {
+  width: .5em;
+}
+.star-cc-group:hover > input + label:before {
+  content: "◉";
+  color: #888;
+  text-shadow: none;
+}
+.star-cc-group:hover > input + label:hover ~ label:before, .star-cc-group:hover > input + label:hover:before {
+  content: "◉";
+  color: lightblue;
+  text-shadow: 0 0 1px #333;
+}
+
+/*:root {
+  font-size: 2em;
+  font-family: Helvetica, arial, sans-serif;
+}*/
+
+
+fieldset {
+  border: 0;
+  background: #222;
+  width: 6em;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+
+/*h1 {
+  text-align: center;
+}*/

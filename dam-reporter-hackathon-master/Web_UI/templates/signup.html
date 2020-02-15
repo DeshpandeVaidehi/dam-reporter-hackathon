@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up Form</title>
+  
+   
+
+
+<link href="{{url_for('static', filename='style.css') }}" rel="stylesheet" />
+  
+</head>
+
+<body>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  
+<div class="container">
+<div>
+<p class="heading">Sign up</p>
+</div>
+  <form>
+    <div class="row">
+      <h4>Personal Details</h4>
+      <div class="input-group ">
+	<label for=fullname>Your name:</label>
+        <input type="text" id="fullname"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group ">
+		<label for=emailid>Email id:</label>
+        <input type="email" id="emailid"/>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group ">
+		<label for=aadhar>Aadhar number:</label>
+        <input type="text" id="aadhar"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group ">
+		<label for=mob_no>Mobile number:</label>
+        <input type="text" id="mob_no"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+	<div class="input-group ">
+	<label for=city>City:</label>
+        <input type="text" id="city"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group ">
+			<label for=passw>Password:</label>
+        <input type="password" id="passw"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+      <div class="input-group ">
+			<label for=confpassw>Confirm password:</label>
+        <input type="password" id="confpassw"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">I accept the terms and conditions, and confirm that I have read the privacy policy.</label>
+      </div>
+    </div>
+ <div class="row">
+
+
+        <input type="button" style = "font-size:30px;background-color: #79cdcd;font-size:20px;color:#efefef;" onclick = "signup()" value = "Create Account"/>
+        
+
+    </div>
+  </form>
+</div>
+
+<script>
+function signup() {
+	if(!document.getElementById("terms").checked)
+		return;
+	if(document.getElementById("passw").value != document.getElementById("confpassw").value)
+		return;
+	var data = {};
+	data["name"] = document.getElementById("fullname").value;
+	data["email_id"] = document.getElementById("emailid").value;
+	data["aadhaar_no"] = document.getElementById("aadhar").value;
+	data["mobile_no"] = document.getElementById("mob_no").value;
+	data["password"] = document.getElementById("passw").value;
+	data["city"] = document.getElementById("city").value;
+	data["authority_level"] = '0';
+
+	data_json = JSON.stringify(data);
+	var xhttp1 = new XMLHttpRequest();
+  	xhttp1.onreadystatechange = function() {
+   	if (this.readyState == 4 && this.status == 200) {
+				
+		var myObj = JSON.parse(this.responseText);
+		alert(myObj.success);
+		if(myObj.success == true)			
+			window.location.href = "{{url_for('login_ui')}}";
+		
+				
+    	}
+  	};
+  	xhttp1.open("POST", "http://127.0.0.1:5000/signup", true);
+  	xhttp1.setRequestHeader("Content-type", "application/json ; charset=utf-8",);
+  	xhttp1.send(data_json);
+
+}
+</script>
+  
+
+
+
+
+
+
+</body>
+
+</html>

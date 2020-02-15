@@ -1,0 +1,60 @@
+dam_name,nearest_city,state,year_of_completion,river,height,length,volume_content,gross_storage_capacity,reservoir_area,effective_storage_capacity,designed_spillway
+Srisailam H.E.Project,Hyderabad,Andhra Pradesh,1984,Krishna,145,512,1953,8.72,616.42,4.25,38369
+Somasila,Nellore,Andhra Pradesh,1989,Pennar,39,760.75,1875,2.21,212.28,NULL,22375
+Nagarjunasagar Dam,Hyderabad,Telangana,1974,Krishana,124.66,4865,7985,11.56,284.9,5.73,42476
+Sriamasagar,Nizamabad,Telangana,1977,Godavari,43,15600,13095,3.17,450.82,2.32,45300
+Manimata  (Hasdeo) Bango,Bilaspur,Chhattisgarh,1990,Hasdeo,87,2509,NULL,3.42,188.47,3.05,42842
+Ukai,Fort Songadh,Gujarat,1972,Tapi,68.58,4926.79,23240,7.5,600.95,6.62,1125000
+Kadana,Samtrampur,Gujarat,1979,Mahi,66,406,2040,1.54,16.6,1.2,49497
+Karjan,Rajpipla,Gujarat,1987,Karjan,100,903,1436.12,0.63,36.77,0.58,19625
+Bhakra Dam,Nangal,Himachal Pradesh,1963,Sutlej,226,518,4130,9.62,168.35,7.19,8212
+Pong Dam,Mukerian,Himachal Pradesh,1974,Beas,133,1951,35500,8.57,260,7.29,12375
+Chamera I (NHPC),Banikhet,Himachal Pradesh,1994,Ravi,140,295,1342,0.39,9.5,0.11,21760
+SALAL (Rockfill Dam) NHPC,Jammu,Jammu & Kashmir,1987,Chinab,118,630,8000,0.28,93.56,0.01,NULL
+SALAL (Concrete Dam) NHPC,Jammu,Jammu & Kashmir,1987,Chinab,112.91,450.81,1450,0.28,93.56,0.01,22427
+Baglihar,Udampur,Jammu & Kashmir,2009,Chenab,143,362.86,2600,0.48,8.08,0.15,16500
+Maithon Dam,Asansol,Jharkhand,1957,Barakar,56,4426,3719,1.09,107.16,0.8,13592
+Panchet Hill,Asansol,Jharkhand,1959,Damodar,48,6777,5704,1.36,153.38,0.5,16608
+Tenughat,Hazaribagh,Jharkhand,1978,Damodar,64.87,6494,NULL,1.02,64.78,1,16000
+Krishnarajasagar,Mysore,Karnataka,1931,Cauvery,42.62,2621,849.45,1.4,10.62,1.28,NULL
+Tungabhadra,Hospet,Karnataka,1953,Tunga-bhadra,49.39,2443,1164,3.16,349.2,3.16,18408
+Bhadra Dam,Shimoga,Karnataka,1965,Bhadra,76.81,1708,2525,2.03,117.25,1.79,3020.95
+Linganamakki Dam,Shimoga,Karnataka,1965,Sharavathy,61.26,2749.29,4080,4.44,317.28,4.29,6834
+Malaprabha,Belgaum,Karnataka,1972,Mala-prabha,43.13,154.52,182,1.07,129.5,0.97,5238.6
+Hidkal,Belgaum,Karnataka,1977,Ghata-prabha,62.48,10183,16675.59,1.44,78.04,1.39,4615
+Hemavathy Project,Hassan,Karnataka,1979,Hemavathy,58.5,4692,5782.5,1.05,91.62,0.93,3624.52
+Supa,Dandeli,Karnataka,1987,Kalinadi,101,331.29,1020,4.18,123,3.76,2830
+Lakhya,Kudremukh,Karnataka,1994,Lakya,108,1048,11000,0.27,6.05,0.24,33
+Almatti,Bijapur,Karnataka,1999,Krishna,52.24,1564.85,1349.99,3.49,487.87,2.99,31007
+KAKKI (EB),Vandiperiyar,Kerala,1966,Kakki,116.13,336.19,725,0.46,17.51,0.45,NULL
+IDUKKI (EB),Cheruthoni,Kerala,1974,NULL,169,365.85,467.29,2,59.83,1.46,NULL
+CHERUTHONI  (EB),Cheruthoni,Kerala,1976,Cheruthoni,138.38,650.75,1699.24,2,59.83,1.46,5013
+KULAMAVU  (EB),Moolamattom,Kerala,1977,Kilivallithodu Tr. To Kaliyar,99.97,384.96,453.13,2,59.83,1.46,NULL
+IDAMALAYAR  (EB),Kothamangalam,Kerala,1985,Idamalayar,101.6,373,880,1.09,28.3,1.02,3013
+Gandhisagar,Mandasur,Madhya Pradesh,1960,Chambal,62.17,514,NULL,7.32,60,6.8,21238
+Tawa,Itarsi,Madhya Pradesh,1978,Tawa,57.92,1722.14,360.52,2.31,200.55,1.94,20400
+Indira Sagar,Punasa,Madhya Pradesh,2005,Narmada,92,653,NULL,12.22,913.48,9.75,83534
+Koyna,Patan,Maharashtra,1964,Koyna,103,805,1555,2.8,115,2.64,3883
+Paithan (Jayakwadi),Paithan,Maharashtra,1976,Godavari,41.3,10415,13410,2.91,398,2.17,18153
+Isapur,Nanded,Maharashtra,1982,Penganga,47,4120,11216,1.25,NULL,0.95,10480
+Totladoh (Pench Hydel),ramtek,Maharashtra,1989,Pench,74.5,680,972.6,1.24,77.71,1.09,12072
+Hirakud,Sambalpur,Odisha,1957,Mahanadi,60.96,4800,19330,8.14,743,5.82,42450
+Rengali,Angol,Odisha,1985,Branmani,70.5,1040,789,5.15,378.4,4.4,46960
+Upper Kolab,Jeypore,Odisha,1985,Kolab,55,646,478.51,1.22,122,0.94,10020
+Indravati (Upper Indavati project),Nawarangpur,Odisha,1996,Indrawati,45,555,332.75,2.3,110,1.49,11430
+Kapur (Upper Indavati project),Nawarangpur,Odisha,1996,Kapur,64,537,3600,2.3,110,1.49,NULL
+Muran (Upper Indavati project),Nawarangpur,Odisha,1996,Muran,65,604,700,2.3,110,1.49,8000
+Podagada  (Upper Indavati project),Nawarangpur,Odisha,1996,NULL,77.5,462,0,2.3,110,1.49,NULL
+Thein (Ranjit Sagar),Pathankot,Punjab,2000,Ravi,47,878,21920,3.28,87.6,2.34,20678
+RANAPRATAP SAGE,Kota,Rajasthan,1970,Chambal,53.95,1143,NULL,2.9,198.29,1.57,18400
+MAHI BAJAJ SAGAR,Banswara,Rajasthan,1985,Mahi,74.5,3109,NULL,2.18,134,1.83,23280
+BISALPUR,Deoli,Rajasthan,1999,Banas,39.5,574,NULL,1.1,218.36,1.04,29046
+Mettur,Salem,Tamil Nadu,1934,Cauvery,65.23,1615.4,1546,2.71,153.46,2.65,12904.8
+Sholayar,Valparai,Tamil Nadu,1971,Sholayar,105.16,1244.19,2830,0.15,5.26,0.14,1474.9
+Ramganga,P.Garhwal,Uttarakhand,1974,Ramganga,128,715,10000,0.25,19.72,0.22,8467
+Jamrani,Kathgodam,Uttarakhand,1990,Gola,140,765,NULL,0.21,NULL,NULL,3630
+Tehri (THDC),Tehri,Uttarakhand,2005,Bhagirathi,260.5,592.7,27980,3.54,42,2.62,13025
+Rihand,Sonbhadra,Uttar Pradesh,1962,Rihand,91.46,934.45,16827,10.6,468,8.9,13342.78
+Matatila,Jhansi,Uttar Pradesh,1964,Betwa,45.72,6315.15,5012.05,1.13,138..85,1.02,15350
+Rajghat,Lalitpur,Uttar Pradesh,2005,Betwa,43.8,10790,NULL,2.17,2453,1.95,33893
+Kangsabati,Bankura,West Bengal,1965,K.Bati/Kumari,41,10400,11300,1.04,124.32,0.9,5715
